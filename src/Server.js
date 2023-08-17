@@ -36,7 +36,7 @@ const axios = require('axios');
 
 const openai = {
   apiKey: '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',
-  apiUrl: 'https://api.openai.com/v1/engines/davinci-codex/completions',
+  apiUrl: 'https://api.openai.com/v1/chat/completions',
 };
 
 app.post('/api/sendMessage', async (req, res) => {
@@ -46,6 +46,7 @@ app.post('/api/sendMessage', async (req, res) => {
       const response = await axios.post(
         openai.apiUrl,
         {
+          model: "gpt-3.5-turbo",
           prompt: message,
           max_tokens: 50,
           n: 1,
