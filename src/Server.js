@@ -35,7 +35,7 @@ const axios = require('axios');
 
 
 const openai = {
-  apiKey: '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',
+  apiKey: '',
   apiUrl: 'https://api.openai.com/v1/chat/completions',
 };
 
